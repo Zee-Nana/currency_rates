@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+  <link href="app.css" rel="stylesheet">
+    <title>Currency_rates</title>
+</head>
+<body>
+   <div id="app">
+        <div class="container">
+            <p id="head">All currencies quoted against the {{ base.base }} (base currency) as at {{ base.date }}</p>
+            <template>
+                <v-simple-table>
+                <template v-slot:default>
+                    <thead>
+                    <tr>
+                        <th class="text-left font">Currency</th>
+                        <th class="text-right">Rates</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr v-for="(value, currency) in items">
+                        <td>{{ currency }}</td>
+                        <td>{{ value }}</td>
+                    </tr>
+                    </tbody>
+                </template>
+                </v-simple-table>
+            </template>
+        </div>
+   </div> 
+
+   <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+   <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

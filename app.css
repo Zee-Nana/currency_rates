@@ -1,0 +1,28 @@
+td, th {
+    border: 1px solid black;
+    text-align: center;
+    padding: 18px;
+    /* width: ; */
+    background-color: rgba(235, 162, 66, 0.808);
+    
+  }
+  tr :hover {
+    background-color: rgb(53, 53, 53);
+    color:  rgba(235, 162, 66, 0.808);
+  }
+  .container{
+      width: 800px;
+  }
+#head{
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 15px;
+    border: 1px solid black;
+    padding: 15px;
+    background-color: black;
+    color:  rgba(235, 162, 66, 0.808);;
+}
+  td{
+      font-family: 'Courier New', Courier, monospace;
+      font-weight: bolder;
+  }
